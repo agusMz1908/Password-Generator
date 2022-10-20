@@ -12,14 +12,15 @@
 <body>
     <div class="mainCard">
         <h3>Password <span>Generator</span></h3>
-        <div class="inputCopy">
+        <div class="inputPassword">
             <div class="password">
                 <span id="pwText"></span>
                 <a href=""><i id="copyBtn" class="fa-regular fa-copy"></i></a>
             </div>
         </div>
         <input id="range" type="range" min="4" max="20" step="1" onchange="showVal(this.value)">
-        <p id="texto" class="displayPwLength">Password Size: <span>12</span></p>
+        <p id="message">Password is <span id="passwordStrength"></span></p>
+        <p id="text" class="displayPwLength">Password Size: <span>12</span></p>
 
         <div class="selectOption">
             <input id="upperCase" type="checkbox" checked/>

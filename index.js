@@ -2,6 +2,8 @@ let textPw = document.querySelector("#pwText");
 let pwLength = document.querySelector(".displayPwLength span");
 let generateBtn = document.querySelector(".generate");
 let copyBtn = document.querySelector("#copyBtn");
+let msg = document.querySelector("#message");
+let strengthPw = document.querySelector("#passwordStrength");
 
 let upper = document.querySelector("#upperCase");
 let lower = document.querySelector("#lowerCase");
@@ -41,7 +43,7 @@ function generatePw(e){
         password += getUpperCase();
     }
 
-    if (lower.checked) { 
+    if (lower.checked) {
         password += getLowerCase();
     }
 
@@ -56,6 +58,8 @@ function generatePw(e){
     if (upper.checked || lower.checked || number.checked || symbol.checked) {
         completePw();
     }
+
+    strength();
 }
 
 function completePw(){
@@ -107,6 +111,30 @@ function getSymbolCase(){
 
 function showVal(value) {
     pwLength.textContent = value; 
+}
+
+function strength() {
+    if(password.length > 0) {
+        msg.style.display = "block"
+    } else {
+        msg.style.display = "none"
+    }
+
+    if(password.length < 10) {
+        strengthPw.innerHTML = "weak";
+        pwText.style.color = "#FF5925"
+        msg.style.color = "#FF5925"
+    } 
+    else if(password.length >= 10 && password.length < 15) {
+        strengthPw.innerHTML = "medium";
+        pwText.style.color = "#F1C40F"
+        msg.style.color = "#F1C40F"
+    }
+    else if(password.length >= 15) {
+        strengthPw.innerHTML = "strong";
+        pwText.style.color = "#52BE80"
+        msg.style.color = "#52BE80"
+    }
 }
 
 

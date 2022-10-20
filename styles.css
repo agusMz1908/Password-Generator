@@ -51,7 +51,7 @@ body {
     color: black;
 }
 
-.inputCopy .password{
+.inputPassword .password{
     /* border: solid 2px #228AF5; */
     padding: 13px 10px;
     border-radius: 4px;
@@ -63,7 +63,7 @@ body {
     justify-content: space-between;
 }
 
-.inputCopy .password a img{
+.inputPassword .password a img{
     width: 22px;
 }
 
@@ -94,4 +94,8 @@ body {
     background-color: #FFFF;
     color: #52BE80;
     border: solid 2px #52BE80;
+}
+
+#message {
+    display: none;
 }
