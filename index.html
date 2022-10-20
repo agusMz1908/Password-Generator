@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/5de4e9b796.js" crossorigin="anonymous"></script>
+    <script src="index.js" defer></script>
+    <title>Password Generator</title>
+</head>
+<body>
+    <div class="mainCard">
+        <h3>Password <span>Generator</span></h3>
+        <div class="inputCopy">
+            <div class="password">
+                <span id="pwText"></span>
+                <a href=""><i id="copyBtn" class="fa-regular fa-copy"></i></a>
+            </div>
+        </div>
+        <input id="range" type="range" min="4" max="20" step="1" onchange="showVal(this.value)">
+        <p id="texto" class="displayPwLength">Password Size: <span>12</span></p>
+
+        <div class="selectOption">
+            <input id="upperCase" type="checkbox" checked/>
+            <label for="upperCase">Contain Uppercase Letters</label>
+        </div>
+        <div class="selectOption">
+            <input id="lowerCase" type="checkbox" checked/>
+            <label for="lowerCase">Contain Lowercase Letters</label>
+        </div>
+        <div class="selectOption">
+            <input id="number" type="checkbox" checked/>
+            <label for="number">Contain Numbers</label>
+        </div>
+        <div class="selectOption">
+            <input id="symbol" type="checkbox" checked/>
+            <label for="symbol">Contain Symbols</label>
+        </div>
+        <button class="generate"> 
+            Generate
+        </button>
+    </div>
+</body>
+</html>
